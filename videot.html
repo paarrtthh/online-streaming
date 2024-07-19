@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatiable"content="IE-edge">
+        <meta name="viewport" content="width=device-width" initial scale="1.0">
+        <title>videot</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link rel="stylesheet" href="videot.css">
+    </head>
+    <header>
+        <a href="#" class="logo"><i class="fas fa-infinity"></i>Major Project</a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="try1.html">Subscription</a>
+            <a class="active" href="videot.html">Pay-Per-View</a>
+            <a href="bt.html">Buy</a>
+            <a href="Contact.html">Contact us.</a>
+        </nav>
+        
+    </header>
+    <body>
+        <div class="container">
+           
+           <div class="video-container">
+            <div class="video"><video src="Images\demonslayer.mp4" muted controls autoplay ></video></div>
+            <div class="video"><video src="Images\demon.mp4" muted controls autoplay></video></div>
+            <div class="video"><video src="Images\aot.mp4" muted controls autoplay></video></div>
+            <div class="video"><video src="Images\tokyo.mp4" muted controls autoplay  ></video></div>
+            <div class="video"><video src="Images\zenitsu.mp4" muted controls autoplay></video></div>
+            <div class="video"><video src="Images\suzume.mp4" muted controls autoplay></video></div>
+           </div>
+           <div class="popup-video">
+            <span>&times;</span>
+            <span><video src="Images\Jujutsu kaisen.mp4" muted autoplay controls></video></span>
+           </div>
+        </div>
+        <script>
+            var video = document.querySelectorAll('video')
+
+            video.forEach(play => play.addEventListener('click', () =>{
+
+                play.classList.toggle('active');
+
+                if(play.paused){
+                    play.play();
+                }
+                else{
+                    play.pause();
+                    play.currentTime= 0;
+                }
+            }));
+        </script>
+    </body>
+    </html>

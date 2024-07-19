@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    
+    <link rel="stylesheet" href="pay1.css">
+</head>
+
+<body>
+    
+    <h1>Payment</h1>
+    <h1>$3.99</h1>
+    <input type="text" placeholder="Enter CARD Details" id="username" required>
+    <input type="password" placeholder="PIN" id="password" required>
+    <input type="password" placeholder="Cvv" id="cvv" required>
+    <input type="submit" value="PAY" onclick="fun()">
+   
+    <script>
+        function fun()
+{
+var username=document.getElementById("username").value;
+var password=document.getElementById("password").value;
+var cvv=document.getElementById("cvv").value;
+if(username == "" || password == "" || cvv == "" ){
+    alert("Payment failed");
+   
+}
+else{
+    alert("Payment succesfull");
+    window.location.assign("videog.html");
+   
+}
+}
+    </script>
+</body>
+</html>

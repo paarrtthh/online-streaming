@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription</title>
+    <link rel="stylesheet" href="videos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<header>
+    <a href="#" class="logo"><i class="fas fa-infinity"></i>Major Project</a>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a class="active" href="videos.html">Subscription</a>
+        <a href="videot.html">Pay-Per-View</a>
+        <a href="bt.html">Buy</a>
+        <a href="Contact.html">Contact us.</a>
+    </nav>
+    
+</header>
+<body>
+    <div class="container">
+        <div class="slide-container active">
+        <div class="slide">
+            
+            <video src="Images\Bleach.mp4"muted autoplay loop></video>
+            
+        </div>
+    </div>
+    <div class="slide-container">
+        <div class="slide">
+
+            <video src="Images\Bramhastra.mp4"muted autoplay loop></video>
+            
+        </div>
+    </div>
+    <div class="slide-container">
+        <div class="slide">
+            
+            <video src="Images\Jujutsu kaisen.mp4"muted autoplay loop></video>
+           
+        </div>
+    </div>
+    <div id="next" onclick="next()"> > </div>
+    <div id="prev"onclick="prev()"> < </div>
+</div>
+<script>
+    let slides = document.querySelectorAll('.slide-container');
+    let index=0;
+
+    function next(){
+        slides[index].classList.remove('active');
+        index=(index+1) % slides.length;
+        slides[index].classList.add('active');
+    }
+    function prev(){
+        slides[index].classList.remove('active');
+        index=(index-1 + slides.length) % slides.length;
+        slides[index].classList.add('active');
+    }
+    
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+*{
+    background-color: black;
+    color: red;
+}
+.box{
+   
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 45%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+
+}
+.box .card-body{
+    padding-top: 5%;
+
+}
+.box .form-controls{
+    padding-top:25pt;
+}

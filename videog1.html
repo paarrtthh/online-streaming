@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport"content="width-device-width,initial-scale=1.0">
+        <title>Video gallery </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="videog.css">
+
+    </head> 
+    <header>
+        <a href="#" class="logo"><i class="fas fa-infinity"></i>Major Project</a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="try1.html">Subscription</a>
+            <a class="active" href="videot.html">Pay-Per-View</a>
+            <a href="videog.html">Buy</a>
+            <a href="Contact.html">Contact us.</a>
+        </nav>
+        
+    </header>
+    <body>
+       
+       <div class="container">
+        <div class="main-video">
+            <div class="video">
+                <video src="Images\The Vampire Dairies.mp4" controls muted autoplay></video>
+                <h3 class="title">The Vampire dairies</h3>
+            </div>
+        </div>
+        <div class="video-list">
+            <div class="vid active">
+                <video src="Images\The.Vampire.Diaries.S08E11.480p.HDTV.x264.NightMovie.mkv"  muted></video>
+                <h3 class="title">01.Episode1</h3>
+            </div>
+            <div class="vid">
+                <video src="Images\The.Vampire.Diaries.S08E12.480p.HDTV.x264.NightMovie.mkv"  muted></video>
+                <h3 class="title">02.Episode2</h3>
+            </div>
+            <div class="vid">
+                <video src="Images\The.Vampire.Diaries.S08E13.480p.HDTV.x264.NightMovie.mkv"  muted></video>
+                <h3 class="title">03.Episode3</h3>
+            </div>
+            <div class="vid">
+                <video src="Images\The.Vampire.Diaries.S08E14.480p.HDTV.x264.NightMovie.mkv"  muted></video>
+                <h3 class="title">04.Episode4</h3>
+            </div>
+            <div class="vid">
+                <video src="Images\The.Vampire.Diaries.S08E15.480p.HDTV.x264.NightMovie.mkv"  muted></video>
+                <h3 class="title">05.Episode5</h3>
+            </div>
+            <div class="vid">
+                <video src="Images\The.Vampire.Diaries.S08E16.480p.HDTV.x264.NightMovie.mkv"  muted></video>
+                <h3 class="title">06.Episode6</h3>
+            </div>
+
+        </div>
+       </div>
+        <script>
+            let listvideo = document.querySelectorAll('.video-list .vid');
+            let mainvideo = document.querySelector('.main-video video');
+            let title = document.querySelector('.main-video .title');
+            listvideo.forEach(video =>{
+                video.onclick = () =>{
+                    listvideo.forEach(vid => vid.classList.remove('active'));
+                    video.classList.add('active');
+                    if(video.classList.contains('active')){
+                        let src = video.children[0].getAttribute('src');
+                        mainvideo.src=src;
+                        let text = video.children[1].innerHTML;
+                        title.innerHTML = text;
+                    };
+                };
+            });
+        </script>
+    </body>
+</html>

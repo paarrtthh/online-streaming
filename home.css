@@ -1,0 +1,97 @@
+*{
+    background-color: black;
+    
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:transparent;
+    padding: 1rem 7%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    box-shadow: black;
+   
+
+}
+header .logo{
+    color:#ffff;
+    font-size: 2.5rem;
+    font-weight:bold;
+    right: 0;
+
+}
+header .logo i{
+    color: red;
+    font-size: 30pt;
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: #ffff;
+}
+
+header .navbar a:hover{    
+    background: red;
+}
+
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: white;
+    border-radius: 50%;
+    background: red;
+}
+header .icons i:hover,
+header .icons a:hover{
+    color: red;
+    background: #ffff;
+    transform: rotate(360deg);
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    background-size: 100% 10rem;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.image{
+        margin-top: -1rem;
+    }
+.img{
+    width: 150pt;
+    
+}
+.content{
+    margin-top: 5pt;
+    width: 40vw;
+}
+h1{
+    font-size: 5rem;
+    color: white;
+}
+h3{
+    font-size: 2.3rem;
+    color: #ffff;
+    margin: 1rem 0;
+}
+p{
+    font-size: 1.3rem;
+    color: #ffff;
+}
+
